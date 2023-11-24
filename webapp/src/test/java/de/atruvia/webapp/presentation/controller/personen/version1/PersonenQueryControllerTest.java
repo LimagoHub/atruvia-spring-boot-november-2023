@@ -99,7 +99,7 @@ class PersonenQueryControllerTest {
     @Test
     void findAll() throws PersonenServiceException {
 
-        var toSend = PersonDto.builder().id(UUID.fromString("86dac2d5-7edc-483a-abc6-239e5b93eb13")).vorname("John").nachname("Doe").build()
+        var toSend = PersonDto.builder().id(UUID.fromString("86dac2d5-7edc-483a-abc6-239e5b93eb13")).vorname("John").nachname("Doe").build();
 
         HttpEntity<PersonDto> httpEntity = new HttpEntity<>(toSend);
 
