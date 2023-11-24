@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;
 
-public interface PersonenRepository extends CrudRepository<PersonEntity, UUID> {
+public interface PersonenRepository extends CrudRepository<PersonEntity, UUID> , PersonenCustomRepository{
 
     @Query("select p from PersonEntity p where p.nachname=:nachname")
     Iterable<PersonEntity> xyz(String nachname);

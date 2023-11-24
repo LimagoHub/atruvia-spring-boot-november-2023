@@ -1,4 +1,6 @@
-package de.atruvia.webapp.domain;
+package de.atruvia.webapp.domain.service;
+
+import de.atruvia.webapp.domain.model.Person;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -19,5 +21,5 @@ public interface PersonenService {
 
     Iterable<Person> findeAlle() throws PersonenServiceException;
 
-    ;
+
 }

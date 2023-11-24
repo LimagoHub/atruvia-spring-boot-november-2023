@@ -1,4 +1,6 @@
-package de.atruvia.webapp.domain;
+package de.atruvia.webapp.domain.service;
+
+import de.atruvia.webapp.domain.model.Person;
 
 public interface BlackListService {
 

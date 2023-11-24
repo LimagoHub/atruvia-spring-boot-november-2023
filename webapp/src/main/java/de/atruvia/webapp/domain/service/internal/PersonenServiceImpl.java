@@ -1,9 +1,10 @@
-package de.atruvia.webapp.domain.internal;
+package de.atruvia.webapp.domain.service.internal;
 
-import de.atruvia.webapp.domain.Person;
-import de.atruvia.webapp.domain.PersonenMapper;
-import de.atruvia.webapp.domain.PersonenService;
-import de.atruvia.webapp.domain.PersonenServiceException;
+import de.atruvia.webapp.aspects.Dozent;
+import de.atruvia.webapp.domain.model.Person;
+import de.atruvia.webapp.domain.mapper.PersonenMapper;
+import de.atruvia.webapp.domain.service.PersonenService;
+import de.atruvia.webapp.domain.service.PersonenServiceException;
 import de.atruvia.webapp.persistence.PersonenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,6 +20,7 @@ import java.util.UUID;
 
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = PersonenServiceException.class, isolation = Isolation.READ_COMMITTED)
 @RequiredArgsConstructor
+@Dozent
 public class PersonenServiceImpl implements PersonenService {
 
 
@@ -36,7 +38,7 @@ public class PersonenServiceImpl implements PersonenService {
             if (repo.existsById(person.getId())) throw new PersonenServiceException("Person already exists");
             repo.save(mapper.convert(person));
         } catch (RuntimeException e) {
-            throw new PersonenServiceException("Upps", e);
+            throw new PersonenServiceException("Echt jetzt?", e);
         }
     }
 

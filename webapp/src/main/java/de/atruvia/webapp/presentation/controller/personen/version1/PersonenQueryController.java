@@ -1,7 +1,7 @@
 package de.atruvia.webapp.presentation.controller.personen.version1;
 
-import de.atruvia.webapp.domain.PersonenService;
-import de.atruvia.webapp.domain.PersonenServiceException;
+import de.atruvia.webapp.domain.service.PersonenService;
+import de.atruvia.webapp.domain.service.PersonenServiceException;
 import de.atruvia.webapp.presentation.dto.PersonDto;
 import de.atruvia.webapp.presentation.mapper.PersonenDtoMapper;
 import io.swagger.v3.oas.annotations.Operation;
@@ -14,9 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.annotation.RequestScope;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -44,7 +42,7 @@ public class PersonenQueryController {
             @ApiResponse(responseCode = "500", description = "internal server error",
                     content = @Content)})
 
-    @GetMapping(path = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @GetMapping(path = "/{id}", produces = { MediaType.APPLICATION_XML_VALUE,MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<PersonDto> findById(@Parameter(
             name =  "id",
             description  = "primaerschluessel der Person als UUID",

@@ -1,6 +1,6 @@
 package de.atruvia.webapp.presentation.mapper;
 
-import de.atruvia.webapp.domain.Person;
+import de.atruvia.webapp.domain.model.Person;
 import de.atruvia.webapp.presentation.dto.PersonDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;

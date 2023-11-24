@@ -1,5 +1,6 @@
-package de.atruvia.webapp.domain;
+package de.atruvia.webapp.domain.mapper;
 
+import de.atruvia.webapp.domain.model.Person;
 import de.atruvia.webapp.persistence.entity.PersonEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;

@@ -1,6 +1,8 @@
-package de.atruvia.webapp.domain;
+package de.atruvia.webapp.domain.config;
 
-import de.atruvia.webapp.domain.internal.PersonenServiceImpl;
+import de.atruvia.webapp.domain.mapper.PersonenMapper;
+import de.atruvia.webapp.domain.service.internal.PersonenServiceImpl;
+import de.atruvia.webapp.domain.service.PersonenService;
 import de.atruvia.webapp.persistence.PersonenRepository;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

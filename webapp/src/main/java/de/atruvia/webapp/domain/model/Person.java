@@ -1,4 +1,4 @@
-package de.atruvia.webapp.domain;
+package de.atruvia.webapp.domain.model;
 
 import java.util.UUID;
 

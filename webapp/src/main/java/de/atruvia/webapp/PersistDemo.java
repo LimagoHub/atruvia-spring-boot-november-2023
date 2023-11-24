@@ -10,12 +10,12 @@ import java.util.UUID;
 
 //@Component
 @RequiredArgsConstructor
-public class Demo {
+public class PersistDemo {
     private final PersonenRepository repo;
 
     @PostConstruct
     public void foo() {
-        var entity = PersonEntity.builder().id(UUID.randomUUID()).vorname("John").nachname("Doe").build();
-        repo.save(entity);
+        var entity = PersonEntity.builder().id(UUID.randomUUID()).vorname("Erika").nachname("Mustermann").build();
+        repo.persist(entity);
     }
 }

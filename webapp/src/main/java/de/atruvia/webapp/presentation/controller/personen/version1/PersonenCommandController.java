@@ -1,21 +1,17 @@
 package de.atruvia.webapp.presentation.controller.personen.version1;
 
-import de.atruvia.webapp.domain.PersonenService;
-import de.atruvia.webapp.domain.PersonenServiceException;
+import de.atruvia.webapp.domain.service.PersonenService;
+import de.atruvia.webapp.domain.service.PersonenServiceException;
 import de.atruvia.webapp.presentation.dto.PersonDto;
 import de.atruvia.webapp.presentation.mapper.PersonenDtoMapper;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.annotation.RequestScope;
-import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.awt.*;
 import java.util.UUID;
 
 
